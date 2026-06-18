@@ -1,228 +1,264 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RachaFácil - Divida contas sem estresse</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="text-gray-700 bg-white leading-relaxed">
 
-  <header class="cabecalho">
-    <div class="container cabecalho-inner">
-      <a href="#" class="logo">🍃 RachaFácil</a>
+  <!-- HEADER -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-[100]">
+    <div class="max-w-[1100px] mx-auto px-5 flex items-center justify-between gap-4 py-4">
+      <a href="#" class="text-xl font-bold text-green-600 whitespace-nowrap">🍃 RachaFácil</a>
 
-      <nav class="menu">
-        <a href="#como-funciona">Como Funciona</a>
-        <a href="#despesas">Recursos</a>
-        <a href="#planos">Planos</a>
-        <a href="#contato">Contato</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#como-funciona" class="text-gray-500 hover:text-green-600 transition-colors">Como Funciona</a>
+        <a href="#despesas" class="text-gray-500 hover:text-green-600 transition-colors">Recursos</a>
+        <a href="#planos" class="text-gray-500 hover:text-green-600 transition-colors">Planos</a>
+        <a href="#contato" class="text-gray-500 hover:text-green-600 transition-colors">Contato</a>
       </nav>
 
-      <div class="cabecalho-botoes">
-        <button class="btn btn-borda">Entrar</button>
-        <button class="btn btn-verde">Criar conta</button>
+      <div class="flex gap-2">
+        <button class="px-5 py-2 rounded-lg text-sm font-semibold bg-transparent border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">Entrar</button>
+        <button class="px-5 py-2 rounded-lg text-sm font-semibold bg-green-600 text-white hover:bg-green-700 transition-colors cursor-pointer border-none">Criar conta</button>
       </div>
     </div>
   </header>
 
   <main>
 
-    <section class="banner">
-      <div class="container">
-        <div class="banner-texto">
-          <h1>Divida contas.<br /><span>Viva em harmonia.</span></h1>
-          <p>O RachaFácil ajuda você e seus amigos a dividirem despesas de forma simples, justa e transparente.</p>
-          <div class="banner-botoes">
-            <button class="btn btn-verde">Criar conta grátis</button>
-            <button class="btn btn-borda">Saiba mais</button>
+    <!-- BANNER -->
+    <section class="banner py-20">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <div class="banner-texto max-w-[45%]">
+          <h1 class="text-[2.5rem] font-bold text-gray-900 leading-tight mb-4">
+            Divida contas.<br /><span class="text-green-600">Viva em harmonia.</span>
+          </h1>
+          <p class="text-gray-500 text-[1.05rem] mb-8">
+            O RachaFácil ajuda você e seus amigos a dividirem despesas de forma simples, justa e transparente.
+          </p>
+          <div class="flex gap-3 flex-wrap">
+            <button class="px-5 py-2 rounded-lg text-sm font-semibold bg-green-600 text-white hover:bg-green-700 transition-colors cursor-pointer border-none">Criar conta grátis</button>
+            <button class="px-5 py-2 rounded-lg text-sm font-semibold bg-transparent border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">Saiba mais</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="stats">
-      <div class="container stats-itens">
-        <div class="stat">
-          <strong>12k+</strong>
-          <span>Grupos criados</span>
+    <!-- STATS -->
+    <section class="bg-green-600 py-8">
+      <div class="max-w-[1100px] mx-auto px-5 flex justify-around gap-4 flex-wrap text-center text-white">
+        <div>
+          <strong class="block text-[1.75rem] font-bold">12k+</strong>
+          <span class="text-sm text-green-200">Grupos criados</span>
         </div>
-        <div class="stat">
-          <strong>48k+</strong>
-          <span>Contas pagas</span>
+        <div>
+          <strong class="block text-[1.75rem] font-bold">48k+</strong>
+          <span class="text-sm text-green-200">Contas pagas</span>
         </div>
-        <div class="stat">
-          <strong>100%</strong>
-          <span>Pix integrado</span>
+        <div>
+          <strong class="block text-[1.75rem] font-bold">100%</strong>
+          <span class="text-sm text-green-200">Pix integrado</span>
         </div>
-        <div class="stat">
-          <strong>Auto</strong>
-          <span>Lembretes</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="despesas" class="secao">
-      <div class="container">
-        <h2 class="titulo-secao">Despesas recentes</h2>
-        <p class="sub-secao">Veja quem pagou e quem ainda deve</p>
-
-        <div class="tabela-box">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Despesa</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Pago por</th>
-                <th scope="col">Vencimento</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>🏠 Aluguel</td>
-                <td>R$ 2.000,00</td>
-                <td>Amanda</td>
-                <td>20/06/2026</td>
-                <td><span class="tag tag-verde">Pago</span></td>
-              </tr>
-              <tr>
-                <td>🌊 Viagem</td>
-                <td>R$ 850,00</td>
-                <td>Carlos</td>
-                <td>25/06/2026</td>
-                <td><span class="tag tag-laranja">Pendente</span></td>
-              </tr>
-              <tr>
-                <td>🛒 Mercado</td>
-                <td>R$ 320,40</td>
-                <td>Julia</td>
-                <td>18/06/2026</td>
-                <td><span class="tag tag-verde">Pago</span></td>
-              </tr>
-              <tr>
-                <td>🎬 Netflix</td>
-                <td>R$ 55,90</td>
-                <td>Pedro</td>
-                <td>30/06/2026</td>
-                <td><span class="tag tag-vermelho">Atrasado</span></td>
-              </tr>
-            </tbody>
-          </table>
+        <div>
+          <strong class="block text-[1.75rem] font-bold">Auto</strong>
+          <span class="text-sm text-green-200">Lembretes</span>
         </div>
       </div>
     </section>
 
-    <section id="como-funciona" class="secao secao-cinza">
-      <div class="container">
-        <h2 class="titulo-secao">Como Funciona</h2>
-        <p class="sub-secao">Em 4 passos simples você já está dividindo</p>
+    <!-- DESPESAS -->
+    <section id="despesas" class="py-16">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h2 class="text-[1.6rem] font-bold text-gray-900 mb-1">Veja um exemplo de como fica fácil visualizar...</h2>
+        <p class="text-gray-500 mb-8">Veja quem pagou e quem ainda deve</p>
 
-        <div class="passos">
-          <article class="passo">
-            <span class="passo-icone">📝</span>
-            <h3>Crie sua conta</h3>
-            <p>Cadastro gratuito em menos de 1 minuto</p>
+        <div class="overflow-x-auto">
+          <div class="rounded-xl overflow-hidden shadow-sm">
+            <table class="w-full border-collapse bg-white">
+              <thead class="bg-green-50">
+                <tr>
+                  <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wide" scope="col">Despesa</th>
+                  <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wide" scope="col">Valor</th>
+                  <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wide" scope="col">Pago por</th>
+                  <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wide" scope="col">Vencimento</th>
+                  <th class="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wide" scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">🏠 Aluguel</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">R$ 2.000,00</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">Amanda</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">20/06/2026</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">
+                    <span class="inline-block px-[0.65rem] py-1 rounded-full text-xs font-semibold bg-green-100 text-green-600">Pago</span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">🌊 Viagem</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">R$ 850,00</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">Carlos</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">25/06/2026</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">
+                    <span class="inline-block px-[0.65rem] py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-600">Pendente</span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">🛒 Mercado</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">R$ 320,40</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">Julia</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">18/06/2026</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">
+                    <span class="inline-block px-[0.65rem] py-1 rounded-full text-xs font-semibold bg-green-100 text-green-600">Pago</span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">🎬 Netflix</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">R$ 55,90</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">Pedro</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">30/06/2026</td>
+                  <td class="px-4 py-[0.85rem] text-sm text-gray-700 border-t border-gray-100">
+                    <span class="inline-block px-[0.65rem] py-1 rounded-full text-xs font-semibold bg-red-100 text-red-600">Atrasado</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="py-16 bg-gray-50">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h2 class="text-[1.6rem] font-bold text-gray-900 mb-1">Como Funciona</h2>
+        <p class="text-gray-500 mb-8">Em 4 passos simples você já está dividindo</p>
+
+        <div class="flex gap-5 flex-wrap">
+          <article class="flex-1 basis-[180px] bg-white border border-gray-200 rounded-xl p-6 text-center transition-all hover:shadow-[0_4px_12px_rgba(22,163,74,0.12)] hover:border-green-300">
+            <span class="text-[2rem] block mb-3">📝</span>
+            <h3 class="text-[0.95rem] font-semibold text-gray-900 mb-1">Crie sua conta</h3>
+            <p class="text-[0.85rem] text-gray-500">Cadastro gratuito em menos de 1 minuto</p>
           </article>
-          <article class="passo">
-            <span class="passo-icone">👥</span>
-            <h3>Monte seu grupo</h3>
-            <p>Adicione amigos, família ou colegas</p>
+          <article class="flex-1 basis-[180px] bg-white border border-gray-200 rounded-xl p-6 text-center transition-all hover:shadow-[0_4px_12px_rgba(22,163,74,0.12)] hover:border-green-300">
+            <span class="text-[2rem] block mb-3">👥</span>
+            <h3 class="text-[0.95rem] font-semibold text-gray-900 mb-1">Monte seu grupo</h3>
+            <p class="text-[0.85rem] text-gray-500">Adicione amigos, família ou colegas</p>
           </article>
-          <article class="passo">
-            <span class="passo-icone">💸</span>
-            <h3>Registre as despesas</h3>
-            <p>Adicione contas e escolha como dividir</p>
+          <article class="flex-1 basis-[180px] bg-white border border-gray-200 rounded-xl p-6 text-center transition-all hover:shadow-[0_4px_12px_rgba(22,163,74,0.12)] hover:border-green-300">
+            <span class="text-[2rem] block mb-3">💸</span>
+            <h3 class="text-[0.95rem] font-semibold text-gray-900 mb-1">Registre as despesas</h3>
+            <p class="text-[0.85rem] text-gray-500">Adicione contas e escolha como dividir</p>
           </article>
-          <article class="passo">
-            <span class="passo-icone">✅</span>
-            <h3>Pague com Pix</h3>
-            <p>Quitação rápida direto pelo app</p>
+          <article class="flex-1 basis-[180px] bg-white border border-gray-200 rounded-xl p-6 text-center transition-all hover:shadow-[0_4px_12px_rgba(22,163,74,0.12)] hover:border-green-300">
+            <span class="text-[2rem] block mb-3">✅</span>
+            <h3 class="text-[0.95rem] font-semibold text-gray-900 mb-1">Pague com Pix</h3>
+            <p class="text-[0.85rem] text-gray-500">Quitação rápida direto pelo app</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="planos" class="secao">
-      <div class="container">
-        <h2 class="titulo-secao">Escolha seu plano</h2>
-        <p class="sub-secao">Comece de graça, evolua quando quiser</p>
+    <!-- PLANOS -->
+    <section id="planos" class="py-16">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h2 class="text-[1.6rem] font-bold text-gray-900 mb-1">Escolha seu plano</h2>
+        <p class="text-gray-500 mb-8">Comece de graça, evolua quando quiser</p>
 
-        <div class="planos">
+        <div class="flex gap-6 flex-wrap justify-center">
 
-          <div class="plano">
-            <h3>Plano Free</h3>
-            <p class="plano-preco">R$ 0</p>
-            <p class="plano-desc">Para sempre gratuito</p>
-            <ul class="plano-itens">
+          <div class="flex-1 basis-[280px] max-w-[360px] border-2 border-gray-200 rounded-xl p-8 text-center">
+            <h3 class="text-[1.1rem] font-bold text-gray-900 my-2">Plano Free</h3>
+            <p class="text-[2.2rem] font-bold text-green-600 mt-3 mb-1">R$ 0</p>
+            <p class="text-[0.85rem] text-gray-400 mb-5">Para sempre gratuito</p>
+            <ul class="text-left text-sm text-gray-700 mb-6 space-y-1">
               <li>✅ Até 3 grupos</li>
               <li>✅ Até 5 membros por grupo</li>
               <li>✅ Pix integrado</li>
               <li>❌ Lembretes automáticos</li>
               <li>❌ Relatórios avançados</li>
             </ul>
-            <button class="btn btn-borda btn-100">Começar grátis</button>
+            <button class="w-full px-5 py-2 rounded-lg text-sm font-semibold bg-transparent border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">Começar grátis</button>
           </div>
 
-          <div class="plano plano-pro">
-            <span class="tag tag-laranja">Mais popular</span>
-            <h3>Plano Pro</h3>
-            <p class="plano-preco">R$ 14,90<small>/mês</small></p>
-            <p class="plano-desc">Tudo do Free, mais:</p>
-            <ul class="plano-itens">
+          <div class="flex-1 basis-[280px] max-w-[360px] border-2 border-green-600 rounded-xl p-8 text-center bg-gradient-to-br from-green-600 to-green-700">
+            <span class="inline-block px-[0.65rem] py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-600">Mais popular</span>
+            <h3 class="text-[1.1rem] font-bold text-white my-2">Plano Pro</h3>
+            <p class="text-[2.2rem] font-bold text-white mt-3 mb-1">R$ 14,90<small class="text-base font-normal">/mês</small></p>
+            <p class="text-[0.85rem] text-green-200 mb-5">Tudo do Free, mais:</p>
+            <ul class="text-left text-sm text-white mb-6 space-y-1">
               <li>✅ Grupos ilimitados</li>
               <li>✅ Membros ilimitados</li>
               <li>✅ Pix integrado</li>
               <li>✅ Lembretes automáticos</li>
               <li>✅ Relatórios avançados</li>
             </ul>
-            <button class="btn btn-branco btn-100">Assinar Pro</button>
+            <button class="w-full px-5 py-2 rounded-lg text-sm font-semibold bg-white text-green-600 hover:bg-green-50 transition-colors cursor-pointer border-none">Assinar Pro</button>
           </div>
 
         </div>
       </div>
     </section>
 
-    <section id="contato" class="secao secao-cinza">
-      <div class="container">
-        <h2 class="titulo-secao">Fale com a gente</h2>
-        <p class="sub-secao">Escolha uma opção abaixo</p>
+    <!-- CONTATO -->
+    <section id="contato" class="py-16 bg-gray-50">
+      <div class="max-w-[1100px] mx-auto px-5">
+        <h2 class="text-[1.6rem] font-bold text-gray-900 mb-1">Fale com a gente</h2>
+        <p class="text-gray-500 mb-8">Escolha uma opção abaixo</p>
 
         <div class="abas">
           <input type="radio" id="aba-fale" name="abas" checked />
           <input type="radio" id="aba-cadastro" name="abas" />
 
-          <div class="abas-menu">
-            <label for="aba-fale" class="aba-btn">💬 Dúvidas / Fale Conosco</label>
-            <label for="aba-cadastro" class="aba-btn">📝 Cadastrar</label>
+          <div class="abas-menu flex border-b-2 border-gray-200 mb-6">
+            <label for="aba-fale" class="aba-btn px-6 py-3 text-[0.9rem] font-semibold text-gray-500 cursor-pointer border-b-[3px] border-transparent -mb-[2px] transition-colors hover:text-green-600">💬 Dúvidas / Fale Conosco</label>
+            <label for="aba-cadastro" class="aba-btn px-6 py-3 text-[0.9rem] font-semibold text-gray-500 cursor-pointer border-b-[3px] border-transparent -mb-[2px] transition-colors hover:text-green-600">📝 Cadastrar</label>
           </div>
 
           <div class="abas-paineis">
 
+            <!-- ABA: FALE CONOSCO -->
             <div class="aba-conteudo conteudo-fale">
-              <form class="formulario" novalidate>
+              <form class="bg-white border border-gray-200 rounded-xl p-8" novalidate>
 
-                <fieldset>
-                  <legend>Identificação</legend>
-                  <div class="linha">
-                    <div class="campo">
-                      <label for="c-nome">Nome *</label>
-                      <input type="text" id="c-nome" name="nome" placeholder="Seu nome" required minlength="3" autocomplete="name" />
+                <fieldset class="border border-gray-200 rounded-lg p-2 m-2">
+                  <legend class="font-semibold text-green-600 px-2 text-[0.95rem]">Identificação</legend>
+                  <div class="flex gap-4 flex-wrap mb-0">
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="c-nome" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Nome *</label>
+                      <input type="text" id="c-nome" name="nome" placeholder="Seu nome" required minlength="3" autocomplete="name"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                     </div>
-                    <div class="campo">
-                      <label for="c-email">E-mail *</label>
-                      <input type="email" id="c-email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="c-email" class="text-sm font-medium text-gray-700 mb-[0.35rem]">E-mail *</label>
+                      <input type="email" id="c-email" name="email" placeholder="seu@email.com" required autocomplete="email"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                     </div>
                   </div>
-                  <div class="linha">
-                    <div class="campo">
-                      <label for="c-telefone">Telefone</label>
-                      <input type="tel" id="c-telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" />
+                  <div class="flex gap-4 flex-wrap mb-0">
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="c-telefone" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Telefone</label>
+                      <input type="tel" id="c-telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                     </div>
-                    <div class="campo">
-                      <label for="c-assunto">Assunto *</label>
-                      <input type="text" id="c-assunto" name="assunto" list="sugestoes-assunto" placeholder="Digite ou escolha" required />
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="c-assunto" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Assunto *</label>
+                      <input type="text" id="c-assunto" name="assunto" list="sugestoes-assunto" placeholder="Digite ou escolha" required
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                       <datalist id="sugestoes-assunto">
                         <option value="Dúvida sobre o plano Pro" />
                         <option value="Problema técnico" />
@@ -233,79 +269,89 @@
                   </div>
                 </fieldset>
 
-                <fieldset>
-                  <legend>Mensagem</legend>
-                  <div class="campo">
-                    <label for="c-mensagem">Mensagem *</label>
-                    <textarea id="c-mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required minlength="10" maxlength="500"></textarea>
+                <fieldset class="border border-gray-200 rounded-lg p-2 m-2">
+                  <legend class="font-semibold text-green-600 px-2 text-[0.95rem]">Mensagem</legend>
+                  <div class="campo flex flex-col mb-4">
+                    <label for="c-mensagem" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Mensagem *</label>
+                    <textarea id="c-mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required minlength="10" maxlength="500"
+                      class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]"></textarea>
                   </div>
-                  <div class="campo">
-                    <label class="item-check">
-                      <input type="checkbox" name="termos-c" required />
-                      Li e aceito a <a href="#">Política de Privacidade</a> *
+                  <div class="campo flex flex-col mb-4">
+                    <label class="flex items-center gap-2 text-sm cursor-pointer">
+                      <input type="checkbox" name="termos-c" required class="w-4 h-4 accent-green-600" />
+                      Li e aceito a <a href="#" class="text-green-600 hover:underline">Política de Privacidade</a> *
                     </label>
                   </div>
                 </fieldset>
 
-                <div class="form-acoes">
-                  <button type="submit" class="btn btn-verde">Enviar mensagem</button>
-                  <button type="reset" class="btn btn-borda">Limpar</button>
+                <div class="flex gap-3 flex-wrap justify-end pt-2">
+                  <button type="submit" class="px-5 py-2 rounded-lg text-sm font-semibold bg-green-600 text-white hover:bg-green-700 transition-colors cursor-pointer border-none">Enviar mensagem</button>
+                  <button type="reset" class="px-5 py-2 rounded-lg text-sm font-semibold bg-transparent border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">Limpar</button>
                 </div>
 
               </form>
             </div>
 
+            <!-- ABA: CADASTRO -->
             <div class="aba-conteudo conteudo-cadastro">
-              <form class="formulario" novalidate>
+              <form class="bg-white border border-gray-200 rounded-xl p-8" novalidate>
 
-                <fieldset>
-                  <legend>Dados pessoais</legend>
-                  <div class="linha">
-                    <div class="campo">
-                      <label for="r-nome">Nome completo *</label>
-                      <input type="text" id="r-nome" name="nome" placeholder="Seu nome completo" required minlength="3" autocomplete="name" />
+                <fieldset class="border border-gray-200 rounded-lg p-2 m-2">
+                  <legend class="font-semibold text-green-600 px-2 text-[0.95rem]">Dados pessoais</legend>
+                  <div class="flex gap-4 flex-wrap mb-0">
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="r-nome" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Nome completo *</label>
+                      <input type="text" id="r-nome" name="nome" placeholder="Seu nome completo" required minlength="3" autocomplete="name"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                     </div>
-                    <div class="campo">
-                      <label for="r-email">E-mail *</label>
-                      <input type="email" id="r-email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="r-email" class="text-sm font-medium text-gray-700 mb-[0.35rem]">E-mail *</label>
+                      <input type="email" id="r-email" name="email" placeholder="seu@email.com" required autocomplete="email"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                     </div>
                   </div>
-                  <div class="linha">
-                    <div class="campo">
-                      <label for="r-telefone">Telefone</label>
-                      <input type="tel" id="r-telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" autocomplete="tel" />
+                  <div class="flex gap-4 flex-wrap mb-0">
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="r-telefone" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Telefone</label>
+                      <input type="tel" id="r-telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" autocomplete="tel"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                     </div>
-                    <div class="campo">
-                      <label for="r-nascimento">Data de nascimento *</label>
-                      <input type="date" id="r-nascimento" name="nascimento" max="2010-01-01" required />
-                    </div>
-                  </div>
-                </fieldset>
-
-                <fieldset>
-                  <legend>Acesso</legend>
-                  <div class="linha">
-                    <div class="campo">
-                      <label for="r-senha">Senha *</label>
-                      <input type="password" id="r-senha" name="senha" placeholder="Mínimo 8 caracteres" required minlength="8" autocomplete="new-password" />
-                    </div>
-                    <div class="campo">
-                      <label for="r-senha2">Confirmar senha *</label>
-                      <input type="password" id="r-senha2" name="senha2" placeholder="Repita a senha" required minlength="8" autocomplete="new-password" />
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="r-nascimento" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Data de nascimento *</label>
+                      <input type="date" id="r-nascimento" name="nascimento" max="2010-01-01" required
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                     </div>
                   </div>
                 </fieldset>
 
-                <fieldset>
-                  <legend>Sobre você</legend>
-                  <div class="linha">
-                    <div class="campo">
-                      <label for="r-pessoas">Pessoas no seu grupo *</label>
-                      <input type="number" id="r-pessoas" name="pessoas" min="2" max="50" value="4" required />
+                <fieldset class="border border-gray-200 rounded-lg p-2 m-2">
+                  <legend class="font-semibold text-green-600 px-2 text-[0.95rem]">Acesso</legend>
+                  <div class="flex gap-4 flex-wrap mb-0">
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="r-senha" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Senha *</label>
+                      <input type="password" id="r-senha" name="senha" placeholder="Mínimo 8 caracteres" required minlength="8" autocomplete="new-password"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
                     </div>
-                    <div class="campo">
-                      <label for="r-como-conheceu">Como nos conheceu?</label>
-                      <select id="r-como-conheceu" name="como-conheceu">
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="r-senha2" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Confirmar senha *</label>
+                      <input type="password" id="r-senha2" name="senha2" placeholder="Repita a senha" required minlength="8" autocomplete="new-password"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="border border-gray-200 rounded-lg p-2 m-2">
+                  <legend class="font-semibold text-green-600 px-2 text-[0.95rem]">Sobre você</legend>
+                  <div class="flex gap-4 flex-wrap mb-0">
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="r-pessoas" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Pessoas no seu grupo *</label>
+                      <input type="number" id="r-pessoas" name="pessoas" min="2" max="50" value="4" required
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]" />
+                    </div>
+                    <div class="campo flex flex-col flex-1 basis-[200px] mb-4">
+                      <label for="r-como-conheceu" class="text-sm font-medium text-gray-700 mb-[0.35rem]">Como nos conheceu?</label>
+                      <select id="r-como-conheceu" name="como-conheceu"
+                        class="border border-gray-300 rounded-[0.4rem] px-3 py-[0.6rem] text-[0.9rem] text-gray-700 bg-white w-full transition-colors focus:outline-none focus:border-green-600 focus:shadow-[0_0_0_2px_rgba(22,163,74,0.15)]">
                         <option value="">Selecione...</option>
                         <option value="indicacao">Indicação de amigo</option>
                         <option value="instagram">Instagram</option>
@@ -315,49 +361,49 @@
                     </div>
                   </div>
 
-                  <div class="campo">
-                    <label>Para que vai usar o RachaFácil?</label>
-                    <div class="lista-checks">
-                      <label class="item-check">
-                        <input type="checkbox" name="uso" value="moradia" /> 🏠 Dividir aluguel / moradia
+                  <div class="campo flex flex-col mb-4">
+                    <label class="text-sm font-medium text-gray-700 mb-[0.35rem]">Para que vai usar o RachaFácil?</label>
+                    <div class="flex flex-col gap-2 mt-[0.35rem]">
+                      <label class="flex items-center gap-2 text-sm cursor-pointer">
+                        <input type="checkbox" name="uso" value="moradia" class="w-4 h-4 accent-green-600" /> 🏠 Dividir aluguel / moradia
                       </label>
-                      <label class="item-check">
-                        <input type="checkbox" name="uso" value="viagem" /> ✈️ Organizar viagens
+                      <label class="flex items-center gap-2 text-sm cursor-pointer">
+                        <input type="checkbox" name="uso" value="viagem" class="w-4 h-4 accent-green-600" /> ✈️ Organizar viagens
                       </label>
-                      <label class="item-check">
-                        <input type="checkbox" name="uso" value="mercado" /> 🛒 Fazer compras em grupo
+                      <label class="flex items-center gap-2 text-sm cursor-pointer">
+                        <input type="checkbox" name="uso" value="mercado" class="w-4 h-4 accent-green-600" /> 🛒 Fazer compras em grupo
                       </label>
-                      <label class="item-check">
-                        <input type="checkbox" name="uso" value="festas" /> 🎉 Festas e eventos
+                      <label class="flex items-center gap-2 text-sm cursor-pointer">
+                        <input type="checkbox" name="uso" value="festas" class="w-4 h-4 accent-green-600" /> 🎉 Festas e eventos
                       </label>
                     </div>
                   </div>
 
-                  <div class="campo">
-                    <label>Plano desejado</label>
-                    <div class="grupo-planos">
-                      <label class="opcao-plano">
+                  <div class="campo flex flex-col mb-4">
+                    <label class="text-sm font-medium text-gray-700 mb-[0.35rem]">Plano desejado</label>
+                    <div class="flex gap-3 flex-wrap mt-[0.35rem]">
+                      <label class="opcao-plano flex items-center gap-[0.4rem] px-5 py-2 border-2 border-gray-300 rounded-lg text-sm font-medium text-gray-500 cursor-pointer transition-colors">
                         <input type="radio" name="r-plano" value="free" checked />
                         Plano Free
                       </label>
-                      <label class="opcao-plano">
+                      <label class="opcao-plano flex items-center gap-[0.4rem] px-5 py-2 border-2 border-gray-300 rounded-lg text-sm font-medium text-gray-500 cursor-pointer transition-colors">
                         <input type="radio" name="r-plano" value="pro" />
                         Plano Pro — R$ 14,90/mês
                       </label>
                     </div>
                   </div>
 
-                  <div class="campo">
-                    <label class="item-check">
-                      <input type="checkbox" name="termos-r" required />
-                      Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> *
+                  <div class="campo flex flex-col mb-4">
+                    <label class="flex items-center gap-2 text-sm cursor-pointer">
+                      <input type="checkbox" name="termos-r" required class="w-4 h-4 accent-green-600" />
+                      Li e aceito os <a href="#" class="text-green-600 hover:underline">Termos de Uso</a> e a <a href="#" class="text-green-600 hover:underline">Política de Privacidade</a> *
                     </label>
                   </div>
                 </fieldset>
 
-                <div class="form-acoes">
-                  <button type="submit" class="btn btn-verde">Criar minha conta</button>
-                  <button type="reset" class="btn btn-borda">Limpar</button>
+                <div class="flex gap-3 flex-wrap justify-end pt-2">
+                  <button type="submit" class="px-5 py-2 rounded-lg text-sm font-semibold bg-green-600 text-white hover:bg-green-700 transition-colors cursor-pointer border-none">Criar minha conta</button>
+                  <button type="reset" class="px-5 py-2 rounded-lg text-sm font-semibold bg-transparent border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors cursor-pointer">Limpar</button>
                 </div>
 
               </form>
@@ -371,28 +417,29 @@
 
   </main>
 
-  <footer class="rodape">
-    <div class="container rodape-cols">
-      <div class="rodape-logo">
-        <p class="logo">🍃 RachaFácil</p>
-        <p>Divida contas. Viva em harmonia.</p>
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 pt-10 pb-4">
+    <div class="max-w-[1100px] mx-auto px-5 flex gap-12 flex-wrap pb-8 border-b border-gray-700 mb-5">
+      <div>
+        <p class="text-xl font-bold text-white mb-1">🍃 RachaFácil</p>
+        <p class="text-[0.85rem]">Divida contas. Viva em harmonia.</p>
       </div>
 
-      <nav class="rodape-menu">
-        <strong>Navegação</strong>
-        <a href="#como-funciona">Como Funciona</a>
-        <a href="#despesas">Recursos</a>
-        <a href="#planos">Planos</a>
+      <nav class="flex flex-col gap-[0.4rem] text-sm">
+        <strong class="text-white mb-1">Navegação</strong>
+        <a href="#como-funciona" class="text-gray-400 hover:text-white transition-colors">Como Funciona</a>
+        <a href="#despesas" class="text-gray-400 hover:text-white transition-colors">Recursos</a>
+        <a href="#planos" class="text-gray-400 hover:text-white transition-colors">Planos</a>
       </nav>
 
-      <address class="rodape-contato">
-        <strong>Contato</strong>
-        <a href="mailto:contato@rachafacil.com.br">contato@rachafacil.com.br</a>
+      <address class="flex flex-col gap-[0.4rem] text-sm not-italic">
+        <strong class="text-white mb-1">Contato</strong>
+        <a href="mailto:contato@rachafacil.com.br" class="text-gray-400 hover:text-white transition-colors">contato@rachafacil.com.br</a>
         <span>São Paulo, SP</span>
       </address>
     </div>
 
-    <p class="copyright">© 2026 RachaFácil. Todos os direitos reservados.</p>
+    <p class="text-center text-[0.8rem] text-gray-600 px-5">© 2026 RachaFácil. Todos os direitos reservados.</p>
   </footer>
 
 </body>
