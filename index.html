@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RachaFácil - Divida contas sem estresse</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-inner">
+      <a href="#" class="logo">🍃 RachaFácil</a>
+
+      <nav class="menu">
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#despesas">Recursos</a>
+        <a href="#planos">Planos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="cabecalho-botoes">
+        <button class="btn btn-borda">Entrar</button>
+        <button class="btn btn-verde">Criar conta</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="banner">
+      <div class="container">
+        <div class="banner-texto">
+          <h1>Divida contas.<br /><span>Viva em harmonia.</span></h1>
+          <p>O RachaFácil ajuda você e seus amigos a dividirem despesas de forma simples, justa e transparente.</p>
+          <div class="banner-botoes">
+            <button class="btn btn-verde">Criar conta grátis</button>
+            <button class="btn btn-borda">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-itens">
+        <div class="stat">
+          <strong>12k+</strong>
+          <span>Grupos criados</span>
+        </div>
+        <div class="stat">
+          <strong>48k+</strong>
+          <span>Contas pagas</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Pix integrado</span>
+        </div>
+        <div class="stat">
+          <strong>Auto</strong>
+          <span>Lembretes</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="despesas" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">Despesas recentes</h2>
+        <p class="sub-secao">Veja quem pagou e quem ainda deve</p>
+
+        <div class="tabela-box">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Despesa</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Pago por</th>
+                <th scope="col">Vencimento</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🏠 Aluguel</td>
+                <td>R$ 2.000,00</td>
+                <td>Amanda</td>
+                <td>20/06/2026</td>
+                <td><span class="tag tag-verde">Pago</span></td>
+              </tr>
+              <tr>
+                <td>🌊 Viagem</td>
+                <td>R$ 850,00</td>
+                <td>Carlos</td>
+                <td>25/06/2026</td>
+                <td><span class="tag tag-laranja">Pendente</span></td>
+              </tr>
+              <tr>
+                <td>🛒 Mercado</td>
+                <td>R$ 320,40</td>
+                <td>Julia</td>
+                <td>18/06/2026</td>
+                <td><span class="tag tag-verde">Pago</span></td>
+              </tr>
+              <tr>
+                <td>🎬 Netflix</td>
+                <td>R$ 55,90</td>
+                <td>Pedro</td>
+                <td>30/06/2026</td>
+                <td><span class="tag tag-vermelho">Atrasado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="secao secao-cinza">
+      <div class="container">
+        <h2 class="titulo-secao">Como Funciona</h2>
+        <p class="sub-secao">Em 4 passos simples você já está dividindo</p>
+
+        <div class="passos">
+          <article class="passo">
+            <span class="passo-icone">📝</span>
+            <h3>Crie sua conta</h3>
+            <p>Cadastro gratuito em menos de 1 minuto</p>
+          </article>
+          <article class="passo">
+            <span class="passo-icone">👥</span>
+            <h3>Monte seu grupo</h3>
+            <p>Adicione amigos, família ou colegas</p>
+          </article>
+          <article class="passo">
+            <span class="passo-icone">💸</span>
+            <h3>Registre as despesas</h3>
+            <p>Adicione contas e escolha como dividir</p>
+          </article>
+          <article class="passo">
+            <span class="passo-icone">✅</span>
+            <h3>Pague com Pix</h3>
+            <p>Quitação rápida direto pelo app</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="planos" class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">Escolha seu plano</h2>
+        <p class="sub-secao">Comece de graça, evolua quando quiser</p>
+
+        <div class="planos">
+
+          <div class="plano">
+            <h3>Plano Free</h3>
+            <p class="plano-preco">R$ 0</p>
+            <p class="plano-desc">Para sempre gratuito</p>
+            <ul class="plano-itens">
+              <li>✅ Até 3 grupos</li>
+              <li>✅ Até 5 membros por grupo</li>
+              <li>✅ Pix integrado</li>
+              <li>❌ Lembretes automáticos</li>
+              <li>❌ Relatórios avançados</li>
+            </ul>
+            <button class="btn btn-borda btn-100">Começar grátis</button>
+          </div>
+
+          <div class="plano plano-pro">
+            <span class="tag tag-laranja">Mais popular</span>
+            <h3>Plano Pro</h3>
+            <p class="plano-preco">R$ 14,90<small>/mês</small></p>
+            <p class="plano-desc">Tudo do Free, mais:</p>
+            <ul class="plano-itens">
+              <li>✅ Grupos ilimitados</li>
+              <li>✅ Membros ilimitados</li>
+              <li>✅ Pix integrado</li>
+              <li>✅ Lembretes automáticos</li>
+              <li>✅ Relatórios avançados</li>
+            </ul>
+            <button class="btn btn-branco btn-100">Assinar Pro</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao secao-cinza">
+      <div class="container">
+        <h2 class="titulo-secao">Fale com a gente</h2>
+        <p class="sub-secao">Escolha uma opção abaixo</p>
+
+        <div class="abas">
+          <input type="radio" id="aba-fale" name="abas" checked />
+          <input type="radio" id="aba-cadastro" name="abas" />
+
+          <div class="abas-menu">
+            <label for="aba-fale" class="aba-btn">💬 Dúvidas / Fale Conosco</label>
+            <label for="aba-cadastro" class="aba-btn">📝 Cadastrar</label>
+          </div>
+
+          <div class="abas-paineis">
+
+            <div class="aba-conteudo conteudo-fale">
+              <form class="formulario" novalidate>
+
+                <fieldset>
+                  <legend>Identificação</legend>
+                  <div class="linha">
+                    <div class="campo">
+                      <label for="c-nome">Nome *</label>
+                      <input type="text" id="c-nome" name="nome" placeholder="Seu nome" required minlength="3" autocomplete="name" />
+                    </div>
+                    <div class="campo">
+                      <label for="c-email">E-mail *</label>
+                      <input type="email" id="c-email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+                    </div>
+                  </div>
+                  <div class="linha">
+                    <div class="campo">
+                      <label for="c-telefone">Telefone</label>
+                      <input type="tel" id="c-telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" />
+                    </div>
+                    <div class="campo">
+                      <label for="c-assunto">Assunto *</label>
+                      <input type="text" id="c-assunto" name="assunto" list="sugestoes-assunto" placeholder="Digite ou escolha" required />
+                      <datalist id="sugestoes-assunto">
+                        <option value="Dúvida sobre o plano Pro" />
+                        <option value="Problema técnico" />
+                        <option value="Sugestão de melhoria" />
+                        <option value="Parceria comercial" />
+                      </datalist>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Mensagem</legend>
+                  <div class="campo">
+                    <label for="c-mensagem">Mensagem *</label>
+                    <textarea id="c-mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required minlength="10" maxlength="500"></textarea>
+                  </div>
+                  <div class="campo">
+                    <label class="item-check">
+                      <input type="checkbox" name="termos-c" required />
+                      Li e aceito a <a href="#">Política de Privacidade</a> *
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="form-acoes">
+                  <button type="submit" class="btn btn-verde">Enviar mensagem</button>
+                  <button type="reset" class="btn btn-borda">Limpar</button>
+                </div>
+
+              </form>
+            </div>
+
+            <div class="aba-conteudo conteudo-cadastro">
+              <form class="formulario" novalidate>
+
+                <fieldset>
+                  <legend>Dados pessoais</legend>
+                  <div class="linha">
+                    <div class="campo">
+                      <label for="r-nome">Nome completo *</label>
+                      <input type="text" id="r-nome" name="nome" placeholder="Seu nome completo" required minlength="3" autocomplete="name" />
+                    </div>
+                    <div class="campo">
+                      <label for="r-email">E-mail *</label>
+                      <input type="email" id="r-email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+                    </div>
+                  </div>
+                  <div class="linha">
+                    <div class="campo">
+                      <label for="r-telefone">Telefone</label>
+                      <input type="tel" id="r-telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" autocomplete="tel" />
+                    </div>
+                    <div class="campo">
+                      <label for="r-nascimento">Data de nascimento *</label>
+                      <input type="date" id="r-nascimento" name="nascimento" max="2010-01-01" required />
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Acesso</legend>
+                  <div class="linha">
+                    <div class="campo">
+                      <label for="r-senha">Senha *</label>
+                      <input type="password" id="r-senha" name="senha" placeholder="Mínimo 8 caracteres" required minlength="8" autocomplete="new-password" />
+                    </div>
+                    <div class="campo">
+                      <label for="r-senha2">Confirmar senha *</label>
+                      <input type="password" id="r-senha2" name="senha2" placeholder="Repita a senha" required minlength="8" autocomplete="new-password" />
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Sobre você</legend>
+                  <div class="linha">
+                    <div class="campo">
+                      <label for="r-pessoas">Pessoas no seu grupo *</label>
+                      <input type="number" id="r-pessoas" name="pessoas" min="2" max="50" value="4" required />
+                    </div>
+                    <div class="campo">
+                      <label for="r-como-conheceu">Como nos conheceu?</label>
+                      <select id="r-como-conheceu" name="como-conheceu">
+                        <option value="">Selecione...</option>
+                        <option value="indicacao">Indicação de amigo</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="google">Google</option>
+                        <option value="outro">Outro</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="campo">
+                    <label>Para que vai usar o RachaFácil?</label>
+                    <div class="lista-checks">
+                      <label class="item-check">
+                        <input type="checkbox" name="uso" value="moradia" /> 🏠 Dividir aluguel / moradia
+                      </label>
+                      <label class="item-check">
+                        <input type="checkbox" name="uso" value="viagem" /> ✈️ Organizar viagens
+                      </label>
+                      <label class="item-check">
+                        <input type="checkbox" name="uso" value="mercado" /> 🛒 Fazer compras em grupo
+                      </label>
+                      <label class="item-check">
+                        <input type="checkbox" name="uso" value="festas" /> 🎉 Festas e eventos
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="campo">
+                    <label>Plano desejado</label>
+                    <div class="grupo-planos">
+                      <label class="opcao-plano">
+                        <input type="radio" name="r-plano" value="free" checked />
+                        Plano Free
+                      </label>
+                      <label class="opcao-plano">
+                        <input type="radio" name="r-plano" value="pro" />
+                        Plano Pro — R$ 14,90/mês
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="campo">
+                    <label class="item-check">
+                      <input type="checkbox" name="termos-r" required />
+                      Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> *
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="form-acoes">
+                  <button type="submit" class="btn btn-verde">Criar minha conta</button>
+                  <button type="reset" class="btn btn-borda">Limpar</button>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-cols">
+      <div class="rodape-logo">
+        <p class="logo">🍃 RachaFácil</p>
+        <p>Divida contas. Viva em harmonia.</p>
+      </div>
+
+      <nav class="rodape-menu">
+        <strong>Navegação</strong>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#despesas">Recursos</a>
+        <a href="#planos">Planos</a>
+      </nav>
+
+      <address class="rodape-contato">
+        <strong>Contato</strong>
+        <a href="mailto:contato@rachafacil.com.br">contato@rachafacil.com.br</a>
+        <span>São Paulo, SP</span>
+      </address>
+    </div>
+
+    <p class="copyright">© 2026 RachaFácil. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
