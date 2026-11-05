@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: racha-facil-backend
+  profiles:
+    default: dev
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+server:
+  port: 8081

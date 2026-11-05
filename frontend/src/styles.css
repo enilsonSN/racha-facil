@@ -1,0 +1,23 @@
+body { font-family: 'Inter', sans-serif; }
+
+/* Banner: imagem de fundo com posição relativa ao viewport */
+.banner {
+  background-color: #f0fdf4;
+  background-image: url('/images/banner-principal.png');
+  background-size: 35vw;
+  background-position: 45vw center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1180px) and (orientation: landscape) {
+  .banner { background-size: 62vw; background-position: 45vw center; }
+}
+@media (max-width: 768px) {
+  .banner { background-image: none; padding-top: 3rem; padding-bottom: 3rem; }
+  .banner-texto { max-width: 100% !important; }
+}
+
+/* Campo com erro de validação do navegador */
+.campo input:invalid:not(:placeholder-shown) { border-color: #dc2626; }
+
+/* Ponto de ancoragem respeitando o header sticky */
+section[id] { scroll-margin-top: 80px; }

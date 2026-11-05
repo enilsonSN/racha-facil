@@ -1,0 +1,18 @@
+# Perfil para a instância Oracle da FIAP.
+# Defina as variáveis de ambiente antes de subir:
+#   ORACLE_URL      ex.: jdbc:oracle:thin:@//host:1521/service
+#   ORACLE_USER
+#   ORACLE_PASSWORD
+spring:
+  datasource:
+    url: ${ORACLE_URL}
+    username: ${ORACLE_USER}
+    password: ${ORACLE_PASSWORD}
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      # "update" cria as tabelas no schema da FIAP na primeira execução.
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
